@@ -9,5 +9,15 @@ export const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    fontSize: "1.5em",
+    color: "white",
+    fontWeight: "bold",
+  },
+  AppBarBackg: {
+    background: "#E9BABC",
+  },
+  Button: {
+    fontSize: "1.1em",
+    color: "white",
   },
 }));
