@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
@@ -8,9 +8,25 @@ import Button from "@material-ui/core/Button";
 //Modal
 import { Modal } from "@material-ui/core";
 
-const Cards = ({ list }) => {
+const Cards = ({ list, set, get }) => {
   const { nombre, precio_kilo, photo, id, descripcion } = list;
   const classes = useStyles();
+
+  //Carrito
+  const anadirCarrito = () => {
+    const canti = Number(document.querySelector('#cant').value);
+    set([...get,{
+      nombre: nombre,
+      cantidad: canti,
+      photo: photo,
+      precio: precio_kilo
+    }])
+
+  }
+
+  useEffect(() => {
+    localStorage.setItem('carrito', JSON.stringify(get))
+  }, [get])
 
   //Modal
   const [modal, setModal] = useState(false);
@@ -32,18 +48,19 @@ const Cards = ({ list }) => {
           />
         </div>
         <div className={classes.divDesc}>
-          <h2>{list.nombre}</h2>
+          <h2 className={classes.titleModal}>{list.nombre}</h2>
           <h3>{precio_kilo}</h3>
-          <p>Precios con iva incluidos</p>
+          <p className={classes.iva}>Precios con iva incluidos</p>
           <p>{descripcion}</p>
-          <Button variant="contained" color="primary">
-            Comprar
-          </Button>
+          <div align="right">
+            <input className={classes.input} type="number" id="cant" min="1" />
+            <Button variant="contained" className={classes.btnAgregar} onClick={anadirCarrito}>
+              Comprar
+            </Button>
+          </div>
         </div>
       </div>
-      <div onClick={abrirCerrarModal} className={classes.btnClose}>
-        X
-      </div>
+      <img className={classes.imgClose} onClick={abrirCerrarModal} src="https://res.cloudinary.com/dpkaiokho/image/upload/v1631658170/latiendita/boton-de-quitar-cuadrado_s4jp1c.png" alt="" />
     </div>
   );
 

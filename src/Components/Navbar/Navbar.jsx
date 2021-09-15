@@ -5,6 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { useStyles } from "./StyleNav";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const classes = useStyles();
@@ -23,7 +24,7 @@ const Navbar = () => {
             La Tiendita
           </Typography>
           <Button color="inherit" className={classes.Button}>
-            Administracion
+            <Link to="/crud">Administracion</Link>
           </Button>
         </Toolbar>
       </AppBar>

@@ -5,6 +5,7 @@ const Product = () => {
   const url = "https://latienditaworkshop.herokuapp.com/products";
 
   const [product, setProduct] = useState([]);
+  const [carrito, setCarrito] = useState([])
 
   useEffect(() => {
     fetch(url)
@@ -13,9 +14,9 @@ const Product = () => {
   }, []);
 
   return (
-    <div>
+    <div  style={{display: "flex", justifyContent: "center"}}>
       {product.map((productos) => (
-        <Cards key={productos.id} list={productos} />
+        <Cards key={productos.id} list={productos} set={setCarrito} get={carrito} />
       ))}
     </div>
   );
