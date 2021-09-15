@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/la-tiendita/static/css/main.44cb80d8.chunk.css",
+    "main.js": "/la-tiendita/static/js/main.ea43b9f3.chunk.js",
+    "main.js.map": "/la-tiendita/static/js/main.ea43b9f3.chunk.js.map",
+    "runtime-main.js": "/la-tiendita/static/js/runtime-main.42c613fa.js",
+    "runtime-main.js.map": "/la-tiendita/static/js/runtime-main.42c613fa.js.map",
+    "static/js/2.99f18fbf.chunk.js": "/la-tiendita/static/js/2.99f18fbf.chunk.js",
+    "static/js/2.99f18fbf.chunk.js.map": "/la-tiendita/static/js/2.99f18fbf.chunk.js.map",
+    "index.html": "/la-tiendita/index.html",
+    "static/css/main.44cb80d8.chunk.css.map": "/la-tiendita/static/css/main.44cb80d8.chunk.css.map",
+    "static/js/2.99f18fbf.chunk.js.LICENSE.txt": "/la-tiendita/static/js/2.99f18fbf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.42c613fa.js",
+    "static/js/2.99f18fbf.chunk.js",
+    "static/css/main.44cb80d8.chunk.css",
+    "static/js/main.ea43b9f3.chunk.js"
+  ]
+}
